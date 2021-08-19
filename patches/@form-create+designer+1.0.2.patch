@@ -1,0 +1,165 @@
+diff --git a/node_modules/@form-create/designer/dist/index.js b/node_modules/@form-create/designer/dist/index.js
+index 3a4b0e2..8bea623 100644
+--- a/node_modules/@form-create/designer/dist/index.js
++++ b/node_modules/@form-create/designer/dist/index.js
+@@ -163,28 +163,30 @@
+       field: 'title',
+       value: '',
+       title: '字段名称'
+-    }, {
+-      type: 'input',
+-      field: 'info',
+-      value: '',
+-      title: '提示信息'
+-    }, {
+-      type: 'Struct',
+-      field: '_control',
+-      value: [],
+-      title: '联动数据',
+-      props: {
+-        defaultValue: [],
+-        validate: function validate(val) {
+-          if (!Array.isArray(val)) { return false; }
+-          if (!val.length) { return true; }
+-          return !val.some(function (_ref) {
+-            var rule = _ref.rule;
+-            return !Array.isArray(rule);
+-          });
+-        }
+-      }
+-    }, {
++    },
++    // {
++    //   type: 'input',
++    //   field: 'info',
++    //   value: '',
++    //   title: '提示信息'
++    // }, {
++    //   type: 'Struct',
++    //   field: '_control',
++    //   value: [],
++    //   title: '联动数据',
++    //   props: {
++    //     defaultValue: [],
++    //     validate: function validate(val) {
++    //       if (!Array.isArray(val)) { return false; }
++    //       if (!val.length) { return true; }
++    //       return !val.some(function (_ref) {
++    //         var rule = _ref.rule;
++    //         return !Array.isArray(rule);
++    //       });
++    //     }
++    //   }
++    // },
++    {
+       type: 'col',
+       props: {
+         span: 24
+@@ -9352,23 +9354,25 @@
+         },
+         expression: "baseForm.api"
+       }
+-    }), _vm._v(" "), _c("ElDivider", [_vm._v("属性配置")]), _vm._v(" "), _c("FormCreate", {
+-      attrs: {
+-        rule: _vm.propsForm.rule,
+-        option: _vm.propsForm.options
+-      },
+-      on: {
+-        change: _vm.propChange,
+-        removeField: _vm.propRemoveField
+-      },
+-      model: {
+-        value: _vm.propsForm.api,
+-        callback: function callback($$v) {
+-          _vm.$set(_vm.propsForm, "api", $$v);
+-        },
+-        expression: "propsForm.api"
+-      }
+-    }), _vm._v(" "), _vm.showBaseRule ? _c("ElDivider", [_vm._v("验证规则")]) : _vm._e(), _vm._v(" "), _c("FormCreate", {
++    }),
++    // _vm._v(" "), _c("ElDivider", [_vm._v("属性配置")]), _vm._v(" "), _c("FormCreate", {
++    //   attrs: {
++    //     rule: _vm.propsForm.rule,
++    //     option: _vm.propsForm.options
++    //   },
++    //   on: {
++    //     change: _vm.propChange,
++    //     removeField: _vm.propRemoveField
++    //   },
++    //   model: {
++    //     value: _vm.propsForm.api,
++    //     callback: function callback($$v) {
++    //       _vm.$set(_vm.propsForm, "api", $$v);
++    //     },
++    //     expression: "propsForm.api"
++    //   }
++    // }),
++    _vm._v(" "), _vm.showBaseRule ? _c("ElDivider", [_vm._v("验证规则")]) : _vm._e(), _vm._v(" "), _c("FormCreate", {
+       directives: [{
+         name: "show",
+         rawName: "v-show",
+@@ -21830,34 +21834,36 @@
+           }, {
+             value: 'string',
+             label: 'String'
+-          }, {
+-            value: 'array',
+-            label: 'Array'
+-          }, {
+-            value: 'number',
+-            label: 'Number'
+-          }, {
+-            value: 'integer',
+-            label: 'Integer'
+-          }, {
+-            value: 'float',
+-            label: 'Float'
+-          }, {
+-            value: 'object',
+-            label: 'Object'
+-          }, {
+-            value: 'date',
+-            label: 'Date'
+-          }, {
+-            value: 'url',
+-            label: 'url'
+-          }, {
+-            value: 'hex',
+-            label: 'hex'
+-          }, {
+-            value: 'email',
+-            label: 'email'
+-          }],
++          },
++          // {
++          //   value: 'array',
++          //   label: 'Array'
++          // }, {
++          //   value: 'number',
++          //   label: 'Number'
++          // }, {
++          //   value: 'integer',
++          //   label: 'Integer'
++          // }, {
++          //   value: 'float',
++          //   label: 'Float'
++          // }, {
++          //   value: 'object',
++          //   label: 'Object'
++          // }, {
++          //   value: 'date',
++          //   label: 'Date'
++          // }, {
++          //   value: 'url',
++          //   label: 'url'
++          // }, {
++          //   value: 'hex',
++          //   label: 'hex'
++          // }, {
++          //   value: 'email',
++          //   label: 'email'
++          // }
++          ],
+           control: [{
+             handle: function handle(v) {
+               return !!v;
